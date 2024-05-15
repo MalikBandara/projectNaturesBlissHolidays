@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="826.0" prefWidth="1428.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Controller.RoomController">
+   <children>
+      <Label layoutX="64.0" layoutY="102.0" text="ROOM ID ">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <TextField fx:id="id" layoutX="63.0" layoutY="144.0" onAction="#SearchOnAction" onKeyReleased="#RoomIdOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/room.css" />
+      <TextField fx:id="number" layoutX="445.0" layoutY="144.0" onKeyReleased="#numberOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/room.css" />
+      <TextField fx:id="type" layoutX="832.0" layoutY="144.0" onKeyReleased="#typeONAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/room.css" />
+      <TextField fx:id="rate" layoutX="63.0" layoutY="262.0" onKeyReleased="#RateOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/room.css" />
+      <TextField fx:id="status" layoutX="445.0" layoutY="262.0" onKeyReleased="#StatusOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/room.css" />
+      <Button fx:id="clearRoom" layoutX="734.0" layoutY="750.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="49.0" prefWidth="130.0" text="Clear">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/room.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="deleteroom" layoutX="900.0" layoutY="750.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="49.0" prefWidth="130.0" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/room.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="uproom" layoutX="1059.0" layoutY="750.0" mnemonicParsing="false" onAction="#UpdateOnAction" prefHeight="53.0" prefWidth="136.0" text="Update">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/room.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="saveroom" layoutX="1227.0" layoutY="750.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="49.0" prefWidth="130.0" text="Save">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/room.css" />
+         </stylesheets>
+      </Button>
+      <TableView fx:id="tblRoom" layoutX="51.0" layoutY="365.0" prefHeight="358.0" prefWidth="1355.0" stylesheets="@../css/room.css">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="258.0" text="Room id" />
+            <TableColumn fx:id="colNumber" prefWidth="265.0" text="Number" />
+            <TableColumn fx:id="colType" prefWidth="318.0" text="type" />
+            <TableColumn fx:id="colRate" prefWidth="225.0" text="Rate" />
+            <TableColumn fx:id="colStatus" prefWidth="288.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label layoutX="439.0" layoutY="109.0" text="ROOM NUMBER">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="831.0" layoutY="109.0" text="TYPE">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="63.0" layoutY="224.0" text="RATE">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="439.0" layoutY="224.0" text="STATUS">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="667.0" layoutY="14.0" text="ROOM FORM">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.9333333373069763" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

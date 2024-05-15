@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="826.0" prefWidth="1428.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Controller.PackageController">
+   <children>
+      <Label layoutX="217.0" layoutY="85.0" prefHeight="24.0" prefWidth="190.0" text="PACKAGE ID ">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <TextField fx:id="txtPackageId" layoutX="215.0" layoutY="117.0" onAction="#txtSearchOnAction" onKeyReleased="#IdOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/package.css" />
+      <TextField fx:id="txtPackageName" layoutX="584.0" layoutY="117.0" onKeyReleased="#NameOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/package.css" />
+      <TextField fx:id="txtDescription" layoutX="963.0" layoutY="117.0" onKeyReleased="#TypeOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/package.css" />
+      <TextField fx:id="txtPrice" layoutX="216.0" layoutY="211.0" onKeyReleased="#priceOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/package.css" />
+      <Button fx:id="pacclear" layoutX="729.0" layoutY="751.0" mnemonicParsing="false" onAction="#clearBtnOnAction" prefHeight="49.0" prefWidth="130.0" text="Clear">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/package.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="packdelete" layoutX="890.0" layoutY="751.0" mnemonicParsing="false" onAction="#deleteBtnOnAction" prefHeight="49.0" prefWidth="130.0" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/package.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="packupdate" layoutX="1042.0" layoutY="751.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="53.0" prefWidth="136.0" text="Update">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/package.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="packasave" layoutX="1196.0" layoutY="751.0" mnemonicParsing="false" onAction="#saveBtnOnAction" prefHeight="49.0" prefWidth="130.0" text="Save">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/package.css" />
+         </stylesheets>
+      </Button>
+      <TableView fx:id="tblPackage" layoutX="213.0" layoutY="277.0" prefHeight="458.0" prefWidth="1111.0" stylesheets="@../css/package.css">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="173.0" text="ID" />
+          <TableColumn fx:id="colname" prefWidth="413.0" text="Name" />
+            <TableColumn fx:id="coldes" prefWidth="306.0" text="Description" />
+            <TableColumn fx:id="colPrice" prefWidth="218.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="584.0" layoutY="85.0" prefHeight="24.0" prefWidth="190.0" text="NAME">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="963.0" layoutY="85.0" prefHeight="24.0" prefWidth="190.0" text="TYPE">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="217.0" layoutY="182.0" prefHeight="24.0" prefWidth="190.0" text="PRICE">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="686.0" text="PACKAGE FORM">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.9333333373069763" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

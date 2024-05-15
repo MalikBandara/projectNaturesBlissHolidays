@@ -1,0 +1,571 @@
+
+/* Button Styles */
+#saveButton {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+/* Hover Effect */
+#saveButton:hover {
+    -fx-background-color: #45a049; /* Darker Green */
+}
+
+/* Pressed Effect */
+#saveButton:pressed {
+    -fx-background-color: #388e3c; /* Even Darker Green */
+}
+
+#btnSarvice {
+    -fx-background-color: linear-gradient(to bottom, green, black); /* Gradient from green to black */
+    -fx-border-color: white; /* White border */
+    -fx-border-radius: 15px; /* Rounded border */
+
+    -fx-padding: 12px 24px; /* Padding */
+    -fx-font-size: 20px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 15px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0); /* Text shadow */
+}
+
+#btnSarvice:hover {
+    -fx-background-color: linear-gradient(to bottom, #04AA6D, black); /* Gradient from green to black on hover */
+    -fx-text-fill: white; /* White text on hover */
+
+    -fx-border-radius: 15px; /* Rounded border on hover */
+    -fx-background-radius: 15px; /* Rounded corners on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0); /* Text shadow on hover */
+}
+
+
+
+#btnGuestLogin {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#btnGuestLogin:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: Black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+
+
+#btnAdminLogin {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#btnAdminLogin:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+
+
+
+
+
+
+
+
+#btnStart {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#btnStart:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: Black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+#btnGalary {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#btnGalary:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: Black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+#backService {
+    -fx-background-color: linear-gradient(to bottom, black, black); /* Gradient from red to dark red */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#backService:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark red to darker red on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+
+#BackOnWeclome {
+    -fx-background-color: linear-gradient(to bottom, #ff6666, #cc0000); /* Gradient from red to dark red */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 12px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+    -fx-font-size: 20px; /* Font size */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 12px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 0); /* Text shadow */
+}
+
+#BackOnWeclome:hover {
+    -fx-background-color: linear-gradient(to bottom, #cc0000, #990000); /* Gradient from dark red to darker red on hover */
+    -fx-text-fill: white; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 12px; /* Rounded border on hover */
+    -fx-background-radius: 12px; /* Rounded corners on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0); /* Enhanced text shadow on hover */
+}
+
+
+#backtowel {
+    -fx-background-color: linear-gradient(to bottom, black, black); /* Gradient from red to dark red */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#backtowel:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark red to darker red on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+#backInLogin {
+    -fx-background-color: linear-gradient(to bottom, black, black); /* Gradient from red to dark red */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#backInLogin:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark red to darker red on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+#btnLogOUt {
+    -fx-background-color: linear-gradient(to bottom, black, black); /* Gradient from red to dark red */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#btnLogOUt:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark red to darker red on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+#backInLoginn {
+    -fx-background-color: linear-gradient(to bottom, black, black); /* Gradient from red to dark red */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#backInLoginn:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark red to darker red on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+#UserId {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #08daff;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#password {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #08daff;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#username {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #08daff;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+
+
+#password {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color:  #08daff;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#loginButton {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#loginButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+
+
+#registerButton {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#registerButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+
+
+
+#playbtn {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#playbtn:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+
+#pausebtn {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#pausebtn:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+
+#resetbutton {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+
+}
+
+#resetbutton:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #ffffff); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+
+}
+
+#txtUserName {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtUserName {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtId {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtId {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtEmail {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtEmail {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtPassword {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtPassword {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtRePassword {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+#txtRePassword {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
+    -fx-border-color: #0ab9ea;
+    -fx-border-radius: 0; /* No border radius */
+}
+
+
+#tblPackage {
+    -fx-background-color: white;
+    -fx-background-radius: 5px; /* Add border radius */
+    -fx-border-width: 1px; /* Add border width */
+    -fx-border-color: black; /* Add border color */
+}
+
+#tblPackage .column-header-background,
+#tblPackage .column-header,
+#tblPackage .filler {
+    -fx-background-color: #0ab9ea; /* Green color for column headers */
+}
+
+#tblPackage .column-header .label {
+    -fx-text-fill: white; /* White text color for column headers */
+    -fx-font-weight: bold;
+}
+
+#tblPackage .table-row-cell {
+    -fx-background-color: white;
+}
+
+#tblPackage .table-row-cell:odd {
+    -fx-background-color: #f5f5f5;
+}
+
+#tblPackage .table-row-cell:selected {
+    -fx-background-color: #cceeff;
+}
+
+/* Apply green color to middle columns */
+#tblPackage .table-cell {
+    -fx-background-color: white; /* Default background color */
+}
+/* Apply green color to details in the table */
+.details-cell {
+    -fx-background-color: #0ab9ea; /* Green color for details */
+}
+
+
+
+
+

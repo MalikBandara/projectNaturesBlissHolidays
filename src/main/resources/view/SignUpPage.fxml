@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="RegisterPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.OuterController.SignUpFormController">
+   <children>
+      <ImageView fitHeight="1000.0" fitWidth="1900.0" layoutX="2.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot%20from%202024-05-11%2020-55-16.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUserName" layoutX="773.0" layoutY="246.0" onKeyReleased="#NameOnAction" prefHeight="63.0" prefWidth="533.0" stylesheets="@../css/Style.css">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="880.0" layoutY="12.0" text="NEW GUEST" textFill="#1e1a1a">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="0.9907407164573669" blue="0.9907407164573669" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="861.0" layoutY="89.0" prefHeight="30.0" prefWidth="401.0" text="Fill the form for Registration ">
+         <font>
+            <Font name="Noto Serif CJK KR Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <TextField fx:id="txtId" layoutX="770.0" layoutY="350.0" onKeyReleased="#NicOnAction" prefHeight="63.0" prefWidth="533.0" stylesheets="@../css/Style.css">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txtPassword" layoutX="773.0" layoutY="585.0" onKeyPressed="#pwOnAction" prefHeight="63.0" prefWidth="533.0" stylesheets="@../css/Style.css">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="registerButton" layoutX="882.0" layoutY="819.0" mnemonicParsing="false" onAction="#RegisterOnAction" prefHeight="67.0" prefWidth="314.0" styleClass="registerButton" stylesheets="@../css/Style.css" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Noto Serif CJK TC Bold" size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="194.0" fitWidth="389.0" layoutX="35.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../welcomeform/Asset-1@2x-1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="830.0" layoutY="932.0" prefHeight="38.0" prefWidth="376.0" text="Already have an Account?" textFill="WHITE">
+         <font>
+            <Font name="Noto Serif CJK JP Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Hyperlink fx:id="login" layoutX="1152.0" layoutY="927.0" onAction="#LoginONAction" text="Login" textFill="#29e4e8">
+         <font>
+            <Font name="Noto Serif CJK KR Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Hyperlink>
+      <PasswordField fx:id="txtRePassword" layoutX="773.0" layoutY="697.0" onKeyReleased="#repwOnAction" prefHeight="63.0" prefWidth="533.0" stylesheets="@../css/Style.css">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="txtEmail" layoutX="773.0" layoutY="462.0" onKeyReleased="#EmailkeyOnAction" prefHeight="63.0" prefWidth="533.0" stylesheets="@../css/Style.css">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="logo" fitHeight="210.0" fitWidth="342.0" layoutX="408.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Asset-1@2x-1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="777.0" layoutY="672.0" prefHeight="31.0" prefWidth="173.0" text="RE - PASSWORD">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="771.0" layoutY="560.0" prefHeight="30.0" prefWidth="160.0" text="PASSWORD">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="771.0" layoutY="437.0" prefHeight="30.0" prefWidth="160.0" text="EMAIL">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="771.0" layoutY="324.0" prefHeight="30.0" prefWidth="160.0" text="NIC NUMBER">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="771.0" layoutY="219.0" prefHeight="30.0" prefWidth="160.0" text="NAME">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

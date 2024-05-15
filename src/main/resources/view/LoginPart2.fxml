@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginRoot" prefHeight="1000.0" prefWidth="1890.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.OuterController.LoginFormPart2">
+   <children>
+      <ImageView fitHeight="1000.0" fitWidth="1900.0" layoutX="-1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot%20from%202024-05-11%2019-36-05.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="686.0" layoutY="33.0" text="WELCOME BACK " textFill="#1e1a1a">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="49.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="0.9907407164573669" blue="0.9907407164573669" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="872.0" layoutY="101.0" text="Login to continue">
+         <font>
+            <Font name="Noto Serif CJK KR Bold" size="27.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <TextField fx:id="UserId" layoutX="728.0" layoutY="306.0" onKeyReleased="#IdentityOnKeyAction" prefHeight="63.0" prefWidth="533.0" stylesheets="@../css/Style.css">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font></TextField>
+      <PasswordField fx:id="password" layoutX="727.0" layoutY="508.0" onKeyReleased="#pwOnKeyAction" prefHeight="63.0" prefWidth="533.0" stylesheets="@../css/Style.css">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font></PasswordField>
+      <Label layoutX="717.0" layoutY="249.0" text="IDENTITY DETAILS">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="23.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="722.0" layoutY="442.0" text="PASSWORD">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="23.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="816.0" layoutY="808.0" text="NEW USER ?" textFill="WHITE">
+         <font>
+            <Font name="Noto Serif CJK KR Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Hyperlink layoutX="967.0" layoutY="802.0" onAction="#linkRegistrationOnAction" text="Register On Hear" textFill="#13edf5">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="23.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.0835999995470047" green="0.2610624134540558" blue="0.3799999952316284" />
+               </color></DropShadow>
+         </effect>
+      </Hyperlink>
+      <Hyperlink fx:id="txtForgetPassword" layoutX="1067.0" layoutY="586.0" onMouseClicked="#txtForgetPasswordOnAction" text="Forget Password" textFill="#431010">
+         <font>
+            <Font name="Noto Serif CJK KR Bold" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color></DropShadow>
+         </effect>
+      </Hyperlink>
+      <Button fx:id="backInLogin" layoutX="29.0" layoutY="900.0" mnemonicParsing="false" onAction="#BackLoginONAction" prefHeight="50.0" prefWidth="132.0" stylesheets="@../css/Style.css" text="Back">
+         <font>
+            <Font name="Noto Serif CJK KR Bold" size="23.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="Logo" fitHeight="282.0" fitWidth="400.0" layoutX="1449.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Asset-1@2x-1.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="810.0" layoutY="690.0" onAction="#loginOnAction" prefHeight="81.0" prefWidth="379.0" stylesheets="@../css/Style.css" text="Login">
+         <font>
+            <Font name="Noto Serif CJK TC Bold" size="23.0" />
+         </font></JFXButton>
+      <Label layoutX="1119.0" layoutY="33.0" text="USERS" textFill="#2bd7e0">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="49.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.021747076883912086" green="0.19570235908031464" blue="0.2763157784938812" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

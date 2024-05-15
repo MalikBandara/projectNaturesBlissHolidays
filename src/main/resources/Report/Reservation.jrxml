@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Reservation" pageWidth="420" pageHeight="450" columnWidth="380" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="591cd16f-f8e5-4f6c-ad60-d3d0ce716be8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (11)"/>
+	<parameter name="Reservation01" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Reservation where id = $P{Reservation01}]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reservation"/>
+	</field>
+	<field name="guest_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="guest_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="guest_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reservation"/>
+	</field>
+	<field name="check_in_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="check_in_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="check_in_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reservation"/>
+	</field>
+	<field name="check_out_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="check_out_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="check_out_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reservation"/>
+	</field>
+	<field name="room_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="room_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="room_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reservation"/>
+	</field>
+	<field name="num_guests" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="num_guests"/>
+		<property name="com.jaspersoft.studio.field.label" value="num_guests"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reservation"/>
+	</field>
+	<field name="Room_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Room_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="Room_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reservation"/>
+	</field>
+	<group name="id">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<group name="guest_name">
+		<groupExpression><![CDATA[$F{guest_name}]]></groupExpression>
+	</group>
+	<group name="check_in_date">
+		<groupExpression><![CDATA[$F{check_in_date}]]></groupExpression>
+	</group>
+	<group name="check_out_date">
+		<groupExpression><![CDATA[$F{check_out_date}]]></groupExpression>
+	</group>
+	<group name="room_type">
+		<groupExpression><![CDATA[$F{room_type}]]></groupExpression>
+	</group>
+	<group name="num_guests">
+		<groupExpression><![CDATA[$F{num_guests}]]></groupExpression>
+	</group>
+	<group name="Room_id">
+		<groupExpression><![CDATA[$F{Room_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="143" splitType="Stretch">
+			<staticText>
+				<reportElement x="55" y="1" width="260" height="30" uuid="a0f5a99a-7a8b-405e-8b7b-3be2b410e6d3"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Natures Bliss Holidays ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="310" y="-23" width="91" height="50" uuid="07d8b642-b95b-4eaf-8c66-6372db89066d"/>
+				<imageExpression><![CDATA["/home/malik/Pictures/Asset-1@2x-1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="78" y="46" width="226" height="30" uuid="7bc903b7-54bb-4e6a-b10f-980321844a9c"/>
+				<text><![CDATA[No 112/6 Hettiyawatta Elapitiwala Ragama ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="29" width="226" height="22" uuid="125d63a4-cf59-4f42-8d9d-e517cdc64aca"/>
+				<textElement>
+					<font fontName="Keraleeyam" size="14" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Best Accommodation For Your Journey ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="63" width="175" height="30" uuid="ed26f072-20d8-4681-a798-ed47e59a4f39"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[0718923234 / 0771899231]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="77" width="124" height="30" uuid="61a9c61f-f71d-4569-ab8f-104d966de47e"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[Naturesbliss@gmail.com]]></text>
+			</staticText>
+			<line>
+				<reportElement x="8" y="98" width="369" height="1" uuid="320c0e69-77a1-42ba-91b2-b96acc1e6303"/>
+			</line>
+			<staticText>
+				<reportElement x="122" y="106" width="202" height="30" uuid="a5161203-046c-4db7-bbb0-3439d34a13fc"/>
+				<textElement>
+					<font fontName="Nimbus Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reservation Receipt]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="219" splitType="Stretch">
+			<textField>
+				<reportElement x="119" y="0" width="100" height="30" uuid="7b0842c9-0ad4-45fa-9d51-34a7358796d8"/>
+				<textFieldExpression><![CDATA[$P{Reservation01}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="30" width="100" height="30" uuid="06a2294d-25d5-471a-be74-d1f8a4408d15">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fbe5129a-b2a0-49f4-924a-2c3899f1befd"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{guest_name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="2faa3fa8-799f-48b5-a98e-2434f122f496">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ddf3fc1-bb57-423e-b03b-241fe9fa4f90"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Nimbus Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reservation ID: ]]></text>
+			</staticText>
+			<textField pattern="MMM d, yyyy">
+				<reportElement x="119" y="60" width="100" height="30" uuid="50b59a99-11a8-4270-87ca-4239ce466202">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a46121da-168e-4f7d-aed7-64fc0a4bfec4"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{check_in_date}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMM d, yyyy">
+				<reportElement x="119" y="90" width="100" height="30" uuid="55677657-7a1d-4263-9f64-5e22acc78009">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e26fa264-1e21-4b87-a09f-e29006480760"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{check_out_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="120" width="100" height="30" uuid="7921638e-92b2-421f-b720-2b1cc4127561">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8d1d79fd-601a-4d49-94c2-454a1aea41a5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{room_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="150" width="100" height="30" uuid="7729e6b0-9e1a-4c9d-8c72-f99d2cf07c2a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="26304f8f-7640-49d0-8013-9a37d48c0532"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{num_guests}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="179" width="100" height="35" uuid="4b96f701-6874-44dd-bc26-ad58d8e3633f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="31d12b31-1d72-4d77-80b1-8eedd469df85"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Room_id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="30" width="100" height="30" uuid="7cc6a0f6-3a33-4a0f-8417-38beb8260d2a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ddf3fc1-bb57-423e-b03b-241fe9fa4f90"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Nimbus Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Guest Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="60" width="100" height="30" uuid="382d3d35-20a4-4024-b18a-f6d1b570366f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ddf3fc1-bb57-423e-b03b-241fe9fa4f90"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Nimbus Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Check In Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="100" height="30" uuid="aefc770a-e039-4d60-b30a-6a1825cebc7b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ddf3fc1-bb57-423e-b03b-241fe9fa4f90"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Nimbus Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Check Out Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="100" height="30" uuid="73dd628c-2831-4993-be13-8b762897a834">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ddf3fc1-bb57-423e-b03b-241fe9fa4f90"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Nimbus Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Room Type:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="100" height="30" uuid="04d87373-1d45-4566-a891-4bd8c39eba9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ddf3fc1-bb57-423e-b03b-241fe9fa4f90"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Nimbus Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Number Of Guest:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="179" width="100" height="30" uuid="c3bea105-d6e6-4be3-803a-99e9c898c459">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ddf3fc1-bb57-423e-b03b-241fe9fa4f90"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Nimbus Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Room ID:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="96" y="-9" width="203" height="30" uuid="7ae5b5df-b7e1-4fd7-8655-df36157a48f1"/>
+				<text><![CDATA[Reservation Successfully Completed ! ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="10" width="103" height="30" uuid="2f334382-6144-484e-9bc5-21f2e8aed72f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thanks you ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

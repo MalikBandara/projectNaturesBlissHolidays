@@ -1,0 +1,44 @@
+#btnSarvice {
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: white; /* White text */
+}
+
+#btnSarvice:hover {
+    -fx-background-color: linear-gradient(to bottom, white, white); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+}
+
+
+#calender{
+    -fx-background-color: linear-gradient(to bottom, #0ab9ea, #0ab9ea); /* Gradient from blue to dark blue */
+    -fx-border-color: white; /* White border */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded border */
+    -fx-padding: 12px 24px; /* Padding */
+
+    -fx-cursor: hand; /* Hand cursor on hover */
+    -fx-transition-duration: 0.4s; /* Transition duration */
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-text-fill: black; /* White text */
+}
+
+#calender:hover {
+    -fx-background-color: linear-gradient(to bottom, white, white); /* Gradient from dark blue to darker blue on hover */
+    -fx-text-fill: black; /* White text on hover */
+    -fx-border-color: white; /* White border on hover */
+    -fx-border-width: 2px; /* Border width on hover */
+    -fx-border-radius: 5px; /* Rounded border on hover */
+    -fx-background-radius: 5px; /* Rounded corners on hover */
+}

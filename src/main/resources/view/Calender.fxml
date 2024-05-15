@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #f2fafc;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.calender.CalendarController">
+    <FlowPane fx:id="calendar" hgap="10.0" layoutX="14.0" layoutY="116.0" prefHeight="600.0" prefWidth="860.0" vgap="5.0" />
+    <HBox alignment="CENTER" layoutX="94.0" layoutY="14.0" prefHeight="60.0" prefWidth="719.0" spacing="5.0">
+        <children>
+            <Button mnemonicParsing="false" onAction="#backOneMonth" text="&lt;" />
+            <Text fx:id="year" strokeType="OUTSIDE" strokeWidth="0.0" text="####">
+                <font>
+                    <Font size="22.0" />
+                </font>
+
+            </Text>
+            <VBox xmlns:fx="http://javafx.com/fxml">
+                <!-- Other existing UI elements -->
+
+                <HBox spacing="10">
+                    <TextField fx:id="dayInput" promptText="Day" />
+                    <TextField fx:id="noteInput" promptText="Note" />
+                    <Button fx:id="saveNoteButton" text="Save Note" />
+                </HBox>
+            </VBox>
+
+            <Text fx:id="month" strokeType="OUTSIDE" strokeWidth="0.0" text="####">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </Text>
+            <Button mnemonicParsing="false" onAction="#forwardOneMonth" text="&gt;" />
+        </children>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="15.0" layoutY="78.0" prefHeight="44.0" prefWidth="860.0" spacing="88.75">
+        <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Su" textAlignment="CENTER" />
+            <Text layoutX="213.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mo" textAlignment="CENTER" />
+            <Text layoutX="222.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu" textAlignment="CENTER" />
+            <Text layoutX="232.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We" textAlignment="CENTER" />
+            <Text layoutX="241.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Th" textAlignment="CENTER" />
+            <Text layoutX="251.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fr" textAlignment="CENTER" />
+            <Text layoutX="266.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sa" textAlignment="CENTER" />
+        </children>
+        <padding>
+            <Insets right="9.0" />
+        </padding>
+    </HBox>
+
+    <!-- Day numbers with added spacing -->
+    <HBox>
+        <Text fx:id="date1" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <padding>
+            <Insets left="5.0" right="5.0" />
+        </padding>
+    </HBox>
+    <HBox>
+        <padding>
+            <Insets left="5.0" right="5.0" />
+        </padding>
+    </HBox>
+    <!-- Add similar HBox elements for other date Text elements -->
+
+</AnchorPane>

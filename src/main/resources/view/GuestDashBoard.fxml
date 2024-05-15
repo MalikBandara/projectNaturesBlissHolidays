@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1885.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Controller.GuestDashBoardController">
+   <children>
+      <ImageView fitHeight="1000.0" fitWidth="1900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Screenshot%20from%202024-05-13%2018-15-32.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblPackage" layoutX="94.0" layoutY="370.0" prefHeight="438.0" prefWidth="1742.0" stylesheets="@../css/Style.css">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="244.0" text="ID" />
+          <TableColumn fx:id="colname" prefWidth="546.3333740234375" text="Name" />
+            <TableColumn fx:id="coldes" prefWidth="491.6666259765625" text="Description" />
+            <TableColumn fx:id="colPrice" prefWidth="459.66668701171875" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnLogOUt" layoutX="1644.0" layoutY="926.0" mnemonicParsing="false" onAction="#LOgOutOnAction" prefHeight="44.0" prefWidth="188.0" stylesheets="@../css/Style.css" text="Log Out">
+         <font>
+            <Font name="Noto Serif CJK KR" size="19.0" />
+         </font></Button>
+      <Text layoutX="649.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME ">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="65.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.8897027373313904" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+      <Text fill="WHITE" layoutX="494.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Natures Bliss Holidays in Sri Lanka offers extraordinary tour guide packages, guaranteeing an" wrappingWidth="1057.3636474609375">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Text>
+      <Text fill="WHITE" layoutX="536.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="unforgettable travel experience. Discover the enchanting beauty of Sri Lanka with our">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Text>
+      <Text fill="WHITE" layoutX="491.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="knowledgeable guides, providing insightful information and personalized itineraries, ensuring ">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Text>
+      <Text fill="WHITE" layoutX="824.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="your journey is truly memorable.">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Text>
+      <Button fx:id="btn" layoutX="821.0" layoutY="874.0" mnemonicParsing="false" onAction="#goOnAction" prefHeight="53.0" prefWidth="375.0" stylesheets="@../css/dashboard.css" text="Make your Reservation hear">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="19.0" />
+         </font></Button>
+      <Text fill="WHITE" layoutX="1023.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OFFERS ">
+         <font>
+            <Font name="Noto Serif CJK HK Bold" size="65.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.41464969515800476" blue="0.41999998688697815" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Text>
+   </children>
+</AnchorPane>

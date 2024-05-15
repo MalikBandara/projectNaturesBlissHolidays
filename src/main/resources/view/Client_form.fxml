@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CustomerForm" prefHeight="826.0" prefWidth="1428.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Controller.ClientFormController">
+   <children>
+      <Button fx:id="saveButton" layoutX="1209.0" layoutY="749.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="55.0" prefWidth="154.0" stylesheets="@../css/clientcss.css" text="Save" />
+      <Button fx:id="UpdateBtn" layoutX="997.0" layoutY="748.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="55.0" prefWidth="154.0" text="Update">
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/clientcss.css" />
+         </stylesheets></Button>
+      <Button fx:id="ClearBtn" layoutX="574.0" layoutY="745.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="55.0" prefWidth="154.0" text="Clear">
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/clientcss.css" />
+         </stylesheets></Button>
+      <Button fx:id="DeleteBtn" layoutX="786.0" layoutY="745.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="55.0" prefWidth="154.0" text="Delete">
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/clientcss.css" />
+         </stylesheets></Button>
+      <TextField fx:id="id" layoutX="48.0" layoutY="113.0" onAction="#txtSearchOnAction" onKeyReleased="#ClIdOnAction" prefHeight="44.0" prefWidth="230.0">
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/clientcss.css" />
+         </stylesheets>
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></TextField>
+      <TextField fx:id="name" layoutX="325.0" layoutY="113.0" onKeyReleased="#clientNameOnAction" prefHeight="44.0" prefWidth="230.0" stylesheets="@../css/clientcss.css">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <TextField fx:id="email" layoutX="593.0" layoutY="113.0" onKeyReleased="#emailOnAction" prefHeight="44.0" prefWidth="230.0" stylesheets="@../css/clientcss.css">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <TextField fx:id="phone" layoutX="885.0" layoutY="111.0" onKeyReleased="#phoneOnAction" prefHeight="44.0" prefWidth="230.0" stylesheets="@../css/clientcss.css">
+         <font>
+            <Font size="20.0" />
+         </font></TextField>
+      <Label layoutX="53.0" layoutY="92.0" prefHeight="24.0" prefWidth="176.0" text="CLIENT ID ">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <TextField fx:id="address" layoutX="1174.0" layoutY="109.0" onKeyReleased="#addressOnAction" prefHeight="44.0" prefWidth="230.0" stylesheets="@../css/clientcss.css" />
+      <TextField fx:id="cheackin" layoutX="48.0" layoutY="207.0" onKeyReleased="#cheackInOnAction" prefHeight="44.0" prefWidth="230.0" stylesheets="@../css/clientcss.css" />
+      <TextField fx:id="cheackout" layoutX="329.0" layoutY="207.0" onKeyReleased="#cheackOutOnAction" prefHeight="44.0" prefWidth="230.0" stylesheets="@../css/clientcss.css" />
+      <TableView fx:id="tblclient" layoutX="47.0" layoutY="271.0" prefHeight="463.0" prefWidth="1356.0" stylesheets="@../css/clientcss.css">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="95.0" text="ID" />
+          <TableColumn fx:id="colname" prefWidth="174.0" text="Name" />
+            <TableColumn fx:id="colmail" prefWidth="220.0" text="Email" />
+            <TableColumn fx:id="colphone" prefWidth="188.0" text="Phone" />
+            <TableColumn fx:id="coladdress" prefWidth="305.0" text="Address" />
+            <TableColumn fx:id="colcheackin" prefWidth="175.0" text="Chaeck in" />
+            <TableColumn fx:id="colcheackout" prefWidth="197.0" text="Cheack out" />
+        </columns>
+      </TableView>
+      <Label layoutX="325.0" layoutY="92.0" prefHeight="24.0" prefWidth="176.0" text="CLIENT NAME ">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="593.0" layoutY="92.0" prefHeight="24.0" prefWidth="176.0" text="EMAIL">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="885.0" layoutY="92.0" prefHeight="24.0" prefWidth="176.0" text="PHONE">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="1174.0" layoutY="92.0" prefHeight="24.0" prefWidth="176.0" text="ADDRESS">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="47.0" layoutY="182.0" prefHeight="24.0" prefWidth="176.0" text="CHEACK IN DATE ">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="329.0" layoutY="182.0" prefHeight="28.0" prefWidth="198.0" text="CHEACK OUT DATE ">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="663.0" layoutY="-4.0" text="CLIENT FORM ">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.9333333373069763" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

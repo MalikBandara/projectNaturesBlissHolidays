@@ -1,0 +1,123 @@
+#Dpane1 {
+    -fx-background-color: rgb(255, 255, 255); /* Blue border color on hover */
+    -fx-border-color: #000000; /* Light gray border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+}
+
+#Dpane1:hover {
+    -fx-border-color: #000000; /* Blue border color on hover */
+    -fx-border-width: 1px; /* Increased border width on hover */
+    -fx-border-radius: 5px; /* Increased border radius on hover */
+    -fx-background-color: rgba(0, 236, 193, 0.81); /* Light blue background color on hover */
+}
+
+
+#Dpane2 {
+    -fx-background-color: rgb(255, 255, 255); /* Blue border color on hover */
+    -fx-border-color: #000000; /* Light gray border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+}
+
+#Dpane2:hover {
+    -fx-border-color: #000000; /* Blue border color on hover */
+    -fx-border-width: 1px; /* Increased border width on hover */
+    -fx-border-radius: 5px; /* Increased border radius on hover */
+    -fx-background-color: rgba(0, 236, 193, 0.81); /* Light blue background color on hover */
+}
+
+
+#Dpane3{
+    -fx-background-color: rgb(255, 255, 255); /* Blue border color on hover */
+    -fx-border-color: #000000; /* Light gray border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+}
+
+#Dpane3:hover {
+    -fx-border-color: #000000; /* Blue border color on hover */
+    -fx-border-width: 1px; /* Increased border width on hover */
+    -fx-border-radius: 5px; /* Increased border radius on hover */
+    -fx-background-color: rgba(0, 236, 193, 0.81); /* Light blue background color on hover */
+}
+
+#Dpane4 {
+    -fx-background-color: rgb(255, 255, 255); /* Blue border color on hover */
+    -fx-border-color: #000000; /* Light gray border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+}
+
+#Dpane4:hover {
+    -fx-border-color: #000000; /* Blue border color on hover */
+    -fx-border-width: 1px; /* Increased border width on hover */
+    -fx-border-radius: 5px; /* Increased border radius on hover */
+    -fx-background-color: rgba(0, 236, 193, 0.81); /* Light blue background color on hover */
+}
+
+#pane3 {
+    -fx-background-color: rgb(255, 255, 255); /* Blue border color on hover */
+    -fx-border-color: #000000; /* Light gray border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+}
+
+#pane3:hover {
+    -fx-border-color: #000000; /* Blue border color on hover */
+    -fx-border-width: 1px; /* Increased border width on hover */
+    -fx-border-radius: 5px; /* Increased border radius on hover */
+    -fx-background-color: rgba(0, 236, 193, 0.81); /* Light blue background color on hover */
+}
+
+
+#pane4 {
+    -fx-background-color: rgb(255, 255, 255); /* Blue border color on hover */
+    -fx-border-color: #000000; /* Light gray border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+}
+
+#pane4:hover {
+    -fx-border-color: #000000; /* Blue border color on hover */
+    -fx-border-width: 1px; /* Increased border width on hover */
+    -fx-border-radius: 5px; /* Increased border radius on hover */
+    -fx-background-color: rgba(0, 236, 193, 0.81); /* Light blue background color on hover */
+}
+
+#xaxist{
+    -fx-stroke: #000000;
+    -fx-fill: #000000;
+    -fx-font-size: 24;
+    -fx-tick-label-fill: #000000;
+}
+#yaxist{
+    -fx-stroke: #000000;
+    -fx-fill: #000000;
+    -fx-font-size: 24;
+    -fx-tick-label-fill: #000000;
+}
+
+
+
+#pieChartt .default-colour0.chart-pie {
+    -fx-pie-color: transparent;
+}
+
+#pieChartt .default-colour1.chart-pie {
+    -fx-pie-color: transparent;
+}
+
+#pieChartt .default-colour2.chart-pie {
+    -fx-pie-color: transparent;
+}
+
+#pieChartt .default-colour3.chart-pie {
+    -fx-pie-color: transparent;
+}
+
+#pieChartt .default-colour4.chart-pie {
+    -fx-pie-color: transparent;
+}
+
+

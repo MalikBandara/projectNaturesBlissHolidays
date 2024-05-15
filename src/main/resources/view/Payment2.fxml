@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1885.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Controller.Payment2Controller">
+   <children>
+      <ImageView fitHeight="1000.0" fitWidth="1900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../slideimage/Screenshot%20from%202024-05-13%2012-35-44.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="152.0" layoutY="111.0" text="PAYMENT ID ">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color></DropShadow>
+         </effect>
+      </Label>
+      <TextField fx:id="paymentId" layoutX="149.0" layoutY="170.0" onAction="#PidOnAction" onKeyReleased="#paymentidOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/payment.css" />
+      <TextField fx:id="Amount" layoutX="646.0" layoutY="170.0" onKeyReleased="#amouuntOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/payment.css" />
+      <TextField fx:id="status" layoutX="1209.0" layoutY="170.0" onKeyReleased="#methodOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/payment.css" />
+      <TextField fx:id="paiddate" layoutX="147.0" layoutY="339.0" onKeyReleased="#dateOnAction" prefHeight="39.0" prefWidth="266.0">
+         <stylesheets>
+            <URL value="@../css/room.css" />
+            <URL value="@../css/payment.css" />
+         </stylesheets>
+      </TextField>
+      <TextField fx:id="method" layoutX="643.0" layoutY="338.0" onKeyReleased="#statusOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/payment.css" />
+      <TableView fx:id="tblPayment" layoutX="136.0" layoutY="425.0" prefHeight="489.0" prefWidth="1237.0" stylesheets="@../css/payment.css">
+         <columns>
+            <TableColumn fx:id="colpyment" prefWidth="184.0" text="Payment ID " />
+            <TableColumn fx:id="colamount" prefWidth="278.0" text="Amount" />
+            <TableColumn fx:id="colstatus" prefWidth="269.0" text="Method" />
+            <TableColumn fx:id="colpaidDate" prefWidth="234.0" text="PaidDate" />
+            <TableColumn fx:id="colMethod" prefWidth="271.0" text="Status" />
+         </columns>
+      </TableView>
+      <Button fx:id="payclear" layoutX="1559.0" layoutY="752.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="53.0" prefWidth="139.0" text="Clear">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/payment.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="paydelete" layoutX="1559.0" layoutY="647.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="53.0" prefWidth="139.0" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/payment.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="payupdate" layoutX="1559.0" layoutY="543.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="53.0" prefWidth="139.0" text="Update">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/payment.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="paysave" layoutX="1555.0" layoutY="452.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="53.0" prefWidth="139.0" text="Save">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+         <stylesheets>
+            <URL value="@../css/Style.css" />
+            <URL value="@../css/payment.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="backtoDash" layoutX="1559.0" layoutY="861.0" mnemonicParsing="false" onAction="#BacktoDashONAction" prefHeight="41.0" prefWidth="151.0" text="Back">
+         <stylesheets>
+            <URL value="@../css/dashboard.css" />
+            <URL value="@../css/payment.css" />
+         </stylesheets></Button>
+      <Label layoutX="645.0" layoutY="112.0" text="AMOUNT">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="1211.0" layoutY="111.0" text="METHOD">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="147.0" layoutY="292.0" text="PAYMENT DATE">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="643.0" layoutY="293.0" text="STATUS">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="933.0" layoutY="18.0" text="PAYMENT FORM">
+         <font>
+            <Font name="Noto Serif CJK SC Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color green="0.9333333373069763" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
