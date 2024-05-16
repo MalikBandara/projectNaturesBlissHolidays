@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="boooking" pageWidth="420" pageHeight="470" columnWidth="380" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e5c9f7b3-9a33-423a-b994-0f7cecf7b1e7">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="boooking" pageWidth="420" pageHeight="460" columnWidth="380" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e5c9f7b3-9a33-423a-b994-0f7cecf7b1e7">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (13)"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<parameter name="Booking1" class="java.lang.String"/>
 	<queryString language="SQL">
 		<![CDATA[select * from Booking b inner join payment p  ON b.payId = p.payId inner join Client c ON b.id = c.id where Booking_id = $P{Booking1}]]>
@@ -155,7 +164,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="121" splitType="Stretch">
+		<band height="93" splitType="Stretch">
 			<staticText>
 				<reportElement x="60" y="10" width="274" height="30" uuid="38f40afb-3342-4edc-b8fc-8476424f3b8e"/>
 				<textElement>
@@ -179,151 +188,163 @@
 				<reportElement x="132" y="68" width="143" height="22" uuid="5ae02ef6-4091-4f36-b718-885040a6d0d0"/>
 				<text><![CDATA[Natures@gmail.com]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="12" y="89" width="49" height="20" uuid="7cffc002-d9c0-4a6a-a2e0-da5739755d1c"/>
-				<textElement>
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[Date]]></text>
-			</staticText>
-			<textField pattern="MMM d, yyyy">
-				<reportElement x="48" y="90" width="100" height="18" uuid="2fa10c80-893b-4f78-be84-0820ed5fb2cf"/>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-			</textField>
+			<line>
+				<reportElement x="9" y="90" width="360" height="1" uuid="c81da218-605b-441a-aea0-1108a10a3034"/>
+			</line>
 		</band>
 	</title>
 	<pageHeader>
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band splitType="Stretch"/>
+		<band height="1" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="236" splitType="Stretch">
+		<band height="249" splitType="Stretch">
 			<textField>
-				<reportElement x="120" y="10" width="100" height="30" uuid="14b8c059-366b-4ca9-bcbe-bda30bb291d8"/>
+				<reportElement x="176" y="10" width="100" height="30" uuid="14b8c059-366b-4ca9-bcbe-bda30bb291d8"/>
 				<textFieldExpression><![CDATA[$P{Booking1}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="10" width="100" height="30" uuid="bde20471-b696-43fe-a9ab-7a99b5b238db">
+				<reportElement x="10" y="10" width="150" height="30" uuid="bde20471-b696-43fe-a9ab-7a99b5b238db">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9c8de0d2-34b7-4fc4-a977-b08777acb3df"/>
 				</reportElement>
 				<textElement>
-					<font isBold="true"/>
+					<font fontName="Nimbus Roman" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Booking ID : ]]></text>
+				<text><![CDATA[BOOKING ID               : ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="120" y="40" width="100" height="30" uuid="ba3b46a5-bded-4721-881d-4bc58a007aa5">
+				<reportElement x="176" y="40" width="100" height="30" uuid="ba3b46a5-bded-4721-881d-4bc58a007aa5">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6316aeaa-56f9-4a6e-b440-b62d3b597c53"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="39" width="100" height="30" uuid="73977989-66dc-4e71-8b09-e38d4b3b0a69">
+				<reportElement x="10" y="39" width="150" height="30" uuid="73977989-66dc-4e71-8b09-e38d4b3b0a69">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6316aeaa-56f9-4a6e-b440-b62d3b597c53"/>
 				</reportElement>
 				<textElement>
-					<font isBold="true"/>
+					<font fontName="Nimbus Roman" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Customer Name :]]></text>
+				<text><![CDATA[CUSTOMER NAME   :]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="120" y="70" width="100" height="30" uuid="8249fc58-580b-4dcb-a436-8c21f0c6e598">
+				<reportElement x="176" y="70" width="100" height="30" uuid="8249fc58-580b-4dcb-a436-8c21f0c6e598">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bbb7b84d-0e28-47d2-975c-85d477c84c21"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{Room_id}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="71" width="100" height="30" uuid="95281a05-5dc5-4e0d-a871-7af3c617c39d">
+				<reportElement x="10" y="71" width="150" height="30" uuid="95281a05-5dc5-4e0d-a871-7af3c617c39d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bbb7b84d-0e28-47d2-975c-85d477c84c21"/>
 				</reportElement>
 				<textElement>
-					<font isBold="true"/>
+					<font fontName="Nimbus Roman" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Room ID  :]]></text>
+				<text><![CDATA[ROOM ID                      :]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="121" y="102" width="100" height="30" uuid="69fc24da-b4bd-4d96-a9c4-5a08762ba394">
+				<reportElement x="176" y="102" width="179" height="30" uuid="69fc24da-b4bd-4d96-a9c4-5a08762ba394">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="74467b5c-919f-45d1-9ee3-0065ea533605"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="103" width="100" height="30" uuid="e822939d-1197-483b-9152-585131535824">
+				<reportElement x="10" y="103" width="166" height="30" uuid="e822939d-1197-483b-9152-585131535824">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="74467b5c-919f-45d1-9ee3-0065ea533605"/>
 				</reportElement>
 				<textElement>
-					<font isBold="true"/>
+					<font fontName="Nimbus Roman" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Email      :]]></text>
+				<text><![CDATA[EMAIL                           :]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="120" y="132" width="100" height="30" uuid="d53c3144-bb21-4bea-a067-d6a584d6049c">
+				<reportElement x="176" y="133" width="100" height="30" uuid="d53c3144-bb21-4bea-a067-d6a584d6049c">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="79a18c90-5c5d-496c-b8b9-d26e884c0781"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{phone}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="132" width="100" height="30" uuid="23ff3612-5711-43e0-ae4a-a764de704ba8">
+				<reportElement x="10" y="132" width="166" height="30" uuid="23ff3612-5711-43e0-ae4a-a764de704ba8">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="79a18c90-5c5d-496c-b8b9-d26e884c0781"/>
 				</reportElement>
 				<textElement>
-					<font isBold="true"/>
+					<font fontName="Nimbus Roman" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Phone     :]]></text>
+				<text><![CDATA[PHONE                          :]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="120" y="164" width="100" height="30" uuid="93ba8e3e-8fbb-4eac-b45c-8ad7622162b1">
+				<reportElement x="176" y="164" width="100" height="30" uuid="93ba8e3e-8fbb-4eac-b45c-8ad7622162b1">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d278096-527f-4ea5-af13-0c98ab32eda8"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="10" y="164" width="100" height="30" uuid="1a21813f-6c47-444b-a99f-6c5d718f00ac">
+				<reportElement x="10" y="164" width="166" height="30" uuid="1a21813f-6c47-444b-a99f-6c5d718f00ac">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d278096-527f-4ea5-af13-0c98ab32eda8"/>
 				</reportElement>
 				<textElement>
-					<font isBold="true"/>
+					<font fontName="Nimbus Roman" size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Amount    :
+				<text><![CDATA[AMOUNT                      :
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="9" y="206" width="100" height="30" uuid="7a4462ca-f6eb-4eb8-b03d-b9b85524e480">
+				<reportElement x="9" y="204" width="100" height="30" uuid="7a4462ca-f6eb-4eb8-b03d-b9b85524e480">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d278096-527f-4ea5-af13-0c98ab32eda8"/>
 				</reportElement>
 				<textElement>
-					<font size="12" isBold="true"/>
+					<font fontName="Nimbus Roman" size="18" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Total Amount ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="120" y="206" width="100" height="30" uuid="c8dc986e-0223-43e7-917e-299a58b17739">
+				<reportElement x="176" y="208" width="72" height="12" uuid="c8dc986e-0223-43e7-917e-299a58b17739">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="79f5a87d-4a54-47f4-b229-53e676816c94"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement x="175" y="194" width="75" height="1" uuid="ff8c1d75-95a5-45b0-82ce-8da38851440e"/>
+			</line>
+			<line>
+				<reportElement x="174" y="230" width="75" height="1" uuid="328af317-da83-4b2b-9b1f-572b22bfcb12"/>
+			</line>
+			<line>
+				<reportElement x="174" y="235" width="75" height="1" uuid="316282d2-44a8-424e-b98f-cf82aa6cc926"/>
+			</line>
+			<staticText>
+				<reportElement x="220" y="208" width="18" height="20" uuid="765885e9-96a0-40fa-871c-e1b1db118bb3"/>
+				<text><![CDATA[$]]></text>
+			</staticText>
 		</band>
 	</detail>
 	<columnFooter>
 		<band splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="60" splitType="Stretch">
+		<band height="52" splitType="Stretch">
 			<staticText>
-				<reportElement x="112" y="10" width="201" height="30" uuid="99e89aa1-6e44-44a7-bd33-69bb906a63d2"/>
+				<reportElement x="99" y="-1" width="238" height="20" uuid="99e89aa1-6e44-44a7-bd33-69bb906a63d2"/>
 				<textElement>
-					<font size="10" isBold="true"/>
+					<font fontName="Serif" size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Thanks you come again !]]></text>
+				<text><![CDATA[Thanks You for your Booking !]]></text>
 			</staticText>
 			<line>
-				<reportElement x="11" y="31" width="360" height="1" uuid="0c7f8027-6bff-4cac-b91e-bef0b230656d"/>
+				<reportElement x="10" y="31" width="360" height="1" uuid="0c7f8027-6bff-4cac-b91e-bef0b230656d"/>
 			</line>
+			<staticText>
+				<reportElement x="124" y="15" width="142" height="20" uuid="69bd5ffa-0f69-4e0c-87d3-188a4a7bed5d"/>
+				<textElement>
+					<font fontName="Abyssinica SIL" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hope you will visit Again ]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>
-		<band height="1" splitType="Stretch"/>
+		<band splitType="Stretch"/>
 	</summary>
 </jasperReport>
