@@ -94,6 +94,35 @@ public class ReservationController implements Initializable {
     private TableView<RoomTm> tblRoom;
 
 
+
+    private void generateNewReservationId() {
+        try {
+            String lastId = Reservationepo.getLastReservationId();
+            String newId = generateNextId(lastId);
+            ResID.setText(newId);
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to generate reservation ID: " + e.getMessage()).show();
+        }
+    }
+
+    private String generateNextId(String lastId) {
+        if (lastId == null || lastId.isEmpty()) {
+            return "RE001"; // Default ID if no reservations exist
+        }
+
+        // Extracting the numeric part of the lastId
+        int num = Integer.parseInt(lastId.substring(2)); // Assuming "RE" prefix
+
+        // Incrementing the numeric part
+        num++;
+
+        // Formatting the numeric part to ensure it has three digits
+        String paddedNum = String.format("%03d", num);
+
+        return "RE" + paddedNum;
+    }
+
+
     private void loadAllRooms() {
 
         ObservableList<RoomTm> obList = FXCollections.observableArrayList();
@@ -136,45 +165,51 @@ public class ReservationController implements Initializable {
     void ReservationONAction(ActionEvent event) throws SQLException {
         String guestId = ResID.getText();
         String guestname = GuestName.getText();
-        String cheackin = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        String cheackout = CheackoutDate.getText();
+        String checkin = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String checkout = CheackoutDate.getText();
         String type = RoomType.getText();
         String noofGuest = NoOfGuest.getText();
         String room = cmbRoom.getValue();
 
-
-        if (guestId.isEmpty() || guestname == null || cheackin == null ||
-                cheackout == null || type.isEmpty()||noofGuest.isEmpty()||room.isEmpty()) {
+        if (guestId.isEmpty() || guestname.isEmpty() || checkin.isEmpty() ||
+                checkout.isEmpty() || type.isEmpty() || noofGuest.isEmpty() || room.isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "Please fill all fields").show();
             return;
         }
 
-        Reservation reservation = new Reservation(guestId, guestname, cheackin, cheackout, type, noofGuest, room);
-
-        if (isRoomIdBooked(room)) {
-            new Alert(Alert.AlertType.ERROR, "Room is already booked Sorry Book an other room !").show();
+        // Check if the room is already booked or reserved
+        if (isRoomIdBooked(room) || isRoomReserved(room)) {
+            new Alert(Alert.AlertType.ERROR, "Room is already booked or reserved. Please select another room.").show();
             return;
         }
 
+        Reservation reservation = new Reservation(guestId, guestname, checkin, checkout, type, noofGuest, room);
 
         try {
             boolean isSaved = Reservationepo.saveReservation(reservation);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Reservation saved successfully!").show();
                 loadAllRooms();
-
-
-                // Add any necessary actions after successful booking
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
+    }
 
 
+    private boolean isRoomReserved(String roomId) throws SQLException {
+        String sql = "SELECT * FROM Reservation WHERE Room_id = ?";
+
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, roomId);
+        ResultSet resultSet = pstm.executeQuery();
+
+        return resultSet.next(); // Returns true if the room is already booked, false otherwise
     }
 
     private boolean isRoomIdBooked(String roomId) throws SQLException {
-        String sql = "SELECT * FROM Reservation WHERE Room_id = ?";
+        String sql = "SELECT * FROM Room WHERE Room_id = ? AND Status = 'Booked'";
 
         Connection connection = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = connection.prepareStatement(sql);
@@ -294,5 +329,8 @@ public class ReservationController implements Initializable {
         setCellValueFactory();
         getRoomId();
         loadAllRooms();
+        generateNewReservationId();
     }
+
+
 }

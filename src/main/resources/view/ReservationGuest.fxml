@@ -68,11 +68,11 @@
             <URL value="@../css/booking.css" />
             <URL value="@../css/reservation.css" />
          </stylesheets></ComboBox>
-      <JFXButton fx:id="btnreservation" buttonType="RAISED" layoutX="958.0" layoutY="140.0" onAction="#ReservationONAction" prefHeight="53.0" prefWidth="372.0" stylesheets="@../css/reservation.css" text="Make Reservation your self">
+      <JFXButton fx:id="btnreservation" buttonType="RAISED" layoutX="814.0" layoutY="140.0" onAction="#ReservationONAction" prefHeight="53.0" prefWidth="372.0" stylesheets="@../css/reservation.css" text="Make Reservation your self">
          <font>
             <Font name="Noto Serif CJK HK Bold" size="20.0" />
          </font></JFXButton>
-      <JFXButton fx:id="receipt" buttonType="RAISED" layoutX="1393.0" layoutY="143.0" onAction="#ReceiptOnAction" prefHeight="51.0" prefWidth="275.0" stylesheets="@../css/reservation.css" text="Get your Receipt " textFill="WHITE">
+      <JFXButton fx:id="receipt" buttonType="RAISED" layoutX="1227.0" layoutY="140.0" onAction="#ReceiptOnAction" prefHeight="51.0" prefWidth="275.0" stylesheets="@../css/reservation.css" text="Get your Receipt " textFill="WHITE">
          <font>
             <Font name="Noto Serif CJK KR Bold" size="20.0" />
          </font></JFXButton>

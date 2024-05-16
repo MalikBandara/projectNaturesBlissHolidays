@@ -54,9 +54,9 @@
           <TableColumn fx:id="colID" prefWidth="152.0" text="ID" />
           <TableColumn fx:id="colPackageID" prefWidth="163.0" text="PackageID" />
             <TableColumn fx:id="colIdentity" prefWidth="192.0" text="Identity Details" />
-            <TableColumn fx:id="colPayID" prefWidth="237.0" text="Pay ID" />
+            <TableColumn fx:id="colPayID" prefWidth="237.0" text="Room ID" />
             <TableColumn fx:id="roomidcol" prefWidth="162.0" text="Booking Date" />
-            <TableColumn fx:id="bookingDatecol" prefWidth="211.0" text="Room ID " />
+            <TableColumn fx:id="bookingDatecol" prefWidth="211.0" text="Pay ID" />
         </columns>
       </TableView>
       <ComboBox fx:id="roomcmb" layoutX="1206.0" layoutY="227.0" onAction="#cmbRoomOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/booking.css" />

@@ -27,6 +27,15 @@ public class RoomRepo {
 
         return pstm.executeUpdate() > 0;
     }
+    public static boolean updateRoomStatus(String roomId, String status) throws SQLException {
+        String sql = "UPDATE Room SET status = ? WHERE Room_id = ?";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, status);
+        pstm.setString(2, roomId);
+
+        return pstm.executeUpdate() > 0;
+    }
 
     public static boolean updateRoom(Room room) throws SQLException {
         String sql = "UPDATE Room SET Room_number = ?, Type = ?, Rate = ?, Status = ? WHERE Room_id = ?";

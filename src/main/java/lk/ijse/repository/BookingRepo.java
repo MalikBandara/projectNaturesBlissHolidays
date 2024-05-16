@@ -96,4 +96,33 @@ public class BookingRepo {
 
         return pstm.executeUpdate() > 0;
     }
+
+    public static String getRoomIdByBookingId(String bookingId) throws SQLException {
+        String sql = "SELECT Room_id FROM Booking WHERE Booking_id = ?";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, bookingId);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            return resultSet.getString("Room_id");
+        } else {
+            return null;
+        }
+    }
+
+    public static String getLastBookingId() throws SQLException {
+
+        String sql = "SELECT Booking_id FROM Booking ORDER BY id DESC LIMIT 1";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            return resultSet.getString(1);
+        } else {
+            return null;
+        }
+    }
 }
+

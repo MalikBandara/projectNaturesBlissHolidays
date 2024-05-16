@@ -129,8 +129,21 @@ public class BookingFormController {
 
         if (isValied()) {
             try {
+                // Retrieve the room ID associated with the booking
+                String roomId = BookingRepo.getRoomIdByBookingId(bookingId);
+                if (roomId == null) {
+                    new Alert(Alert.AlertType.ERROR, "Booking not found!").show();
+                    return;
+                }
+
                 boolean isDeleted = BookingRepo.deleteBooking(bookingId);
                 if (isDeleted) {
+                    // Update room status to available
+                    boolean isRoomUpdated = RoomRepo.updateRoomStatus(roomId, "available");
+                    if (!isRoomUpdated) {
+                        new Alert(Alert.AlertType.WARNING, "Booking deleted, but room status not updated!").show();
+                    }
+
                     new Alert(Alert.AlertType.CONFIRMATION, "Booking deleted!").show();
                     loadAllBooking();
                     loadAllRooms(); // Update rooms availability
@@ -170,7 +183,7 @@ public class BookingFormController {
                 }
 
                 // Check if room is already booked
-                if (isRoomIdBooked(roomId)) {
+                if (isRoomIdBooked(roomId)|| isRoomReserve(roomId)) {
                     new Alert(Alert.AlertType.ERROR, "Room is already booked!").show();
                     return;
                 }
@@ -189,9 +202,37 @@ public class BookingFormController {
             new Alert(Alert.AlertType.ERROR, "Check your fields correctly!").show();
         }
     }
+    private void generateNewBookingId() {
+        try {
+            String lastBookingId = BookingRepo.getLastBookingId();
+            String newBookingId = generateNextBookingId(lastBookingId);
+            txtBookingId.setText(newBookingId);
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to generate booking ID: " + e.getMessage()).show();
+        }
+    }
+    private String generateNextBookingId(String lastBookingId) {
+        if (lastBookingId == null || lastBookingId.isEmpty()) {
+            return "B001"; // Default ID if no bookings exist
+        }
 
-    private boolean isRoomIdBooked(String roomId) throws SQLException {
-        String sql = "SELECT * FROM Booking WHERE Room_id = ?";
+        // Extracting the numeric part of the lastBookingId
+        String numericPart = lastBookingId.substring(1); // Exclude the first character which is 'B'
+
+        // Incrementing the numeric part
+        int num = Integer.parseInt(numericPart);
+        num++;
+
+        // Formatting the numeric part to ensure it has three digits
+        String paddedNum = String.format("%03d", num);
+
+        return "B" + paddedNum;
+    }
+
+
+    private boolean isRoomReserve(String roomId) throws SQLException {
+
+        String sql = "SELECT * FROM Room WHERE Room_id = ? AND Status = 'Reservation Booked'";
 
         Connection connection = DBConnection.getInstance().getConnection();
         PreparedStatement pstm = connection.prepareStatement(sql);
@@ -199,6 +240,37 @@ public class BookingFormController {
         ResultSet resultSet = pstm.executeQuery();
 
         return resultSet.next(); // Returns true if the room is already booked, false otherwise
+    }
+
+    private boolean isRoomIdBooked(String roomId) throws SQLException {
+        String sql = "SELECT * FROM Booking WHERE Room_id = ?";
+        boolean isRoomBooked = false;
+
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, roomId);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            isRoomBooked = true;
+        }
+
+
+        if (!isRoomBooked) {
+            String roomStatusSql = "SELECT Status FROM Room WHERE Room_id = ?";
+            PreparedStatement roomStatusPstm = connection.prepareStatement(roomStatusSql);
+            roomStatusPstm.setString(1, roomId);
+            ResultSet roomStatusResultSet = roomStatusPstm.executeQuery();
+
+            if (roomStatusResultSet.next()) {
+                String status = roomStatusResultSet.getString("Status");
+                if (status.equalsIgnoreCase("Booked")) {
+                    isRoomBooked = true; // Room status is "Booked"
+                }
+            }
+        }
+
+        return isRoomBooked;
     }
 
 
@@ -253,6 +325,7 @@ public class BookingFormController {
         loadAllBooking();
         loadAllRooms();
         txtDate.setText(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        generateNewBookingId();
 
 
 
