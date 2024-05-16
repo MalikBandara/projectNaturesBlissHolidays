@@ -107,6 +107,30 @@ public class RoomController {
 
 
     }
+    private void generateNewRoomId() {
+        try {
+            String lastId = RoomRepo.getLastRoomId();
+            String newId = generateNextRoomId(lastId);
+            id.setText(newId);
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to generate room ID: " + e.getMessage()).show();
+        }
+    }
+
+    private String generateNextRoomId(String lastId) {
+        if (lastId == null || lastId.isEmpty()) {
+            return "R001"; // If there are no previous IDs, start with R001
+        }
+
+        int lastNumber = Integer.parseInt(lastId.substring(1)); // Extract the number part
+        int nextNumber = lastNumber + 1;
+
+        // Format the next number with leading zeros to maintain the same length
+        String formattedNextNumber = String.format("%03d", nextNumber);
+
+        return "R" + formattedNextNumber;
+    }
+
 
     @FXML
     void btnBackOnAction(ActionEvent event) {
@@ -203,6 +227,7 @@ public class RoomController {
     public void initialize(){
         setCellValueFactory();
         loadAllRooms();
+        generateNewRoomId();
     }
 
 

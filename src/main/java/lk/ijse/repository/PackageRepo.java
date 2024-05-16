@@ -116,4 +116,16 @@ public class PackageRepo {
     }
 
 
+    public static String getLastPackageId() throws SQLException {
+        String sql = "SELECT Package_id FROM Package ORDER BY Package_id DESC LIMIT 1";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            return resultSet.getString(1);
+        } else {
+            return null;
+        }
+    }
 }

@@ -116,6 +116,18 @@ public class PaymentRepo {
     }
 
 
+    public static String getLastPaymentId() throws SQLException {
+        String sql = "SELECT payId FROM payment ORDER BY payId DESC LIMIT 1";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            return resultSet.getString(1);
+        } else {
+            return null;
+        }
+    }
 }
 
 

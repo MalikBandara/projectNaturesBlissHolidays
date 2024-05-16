@@ -125,4 +125,17 @@ public class RoomRepo {
 
     return  false;
     }
+
+    public static String getLastRoomId() throws SQLException {
+        String sql = "SELECT Room_id FROM Room ORDER BY Room_id DESC LIMIT 1";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            return resultSet.getString(1);
+        } else {
+            return null;
+        }
+    }
 }

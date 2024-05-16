@@ -108,14 +108,43 @@ public class VehicleFormController {
 
     }
 
+
     public void initialize(){
         getEmployeeId();
         setCellValueFactory();
         loadAllVehicles();
+        generateNewVehicleId();
 
 
 
     }
+
+    private String generateNextVehicleId(String lastId) {
+        if (lastId == null || lastId.isEmpty()) {
+            return "V0001"; // If there are no existing IDs, start from V0001
+        }
+
+        String prefix = lastId.substring(0, 1); // Extract the prefix (e.g., "V")
+        int sequence = Integer.parseInt(lastId.substring(1)); // Extract the sequence part and convert it to an integer
+        sequence++; // Increment the sequence
+        String newId = prefix + String.format("%04d", sequence); // Format the new ID with leading zeros if necessary
+        return newId;
+    }
+
+    private void generateNewVehicleId() {
+        try {
+            String lastId = VehicleRepo.getLastVehicleId();
+            String newId = generateNextVehicleId(lastId);
+            vid.setText(newId);
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to generate vehicle ID: " + e.getMessage()).show();
+        }
+    }
+
+
+
+
+
     private void loadAllVehicles() {
         try {
             ObservableList<VehicleTm> obList = FXCollections.observableArrayList();

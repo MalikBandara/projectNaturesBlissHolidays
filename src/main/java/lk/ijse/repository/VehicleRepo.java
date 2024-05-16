@@ -89,4 +89,18 @@ public class VehicleRepo {
             return null;
         }
     }
+
+    public static String getLastVehicleId() throws SQLException {
+
+        String sql = "SELECT Vehicle_id FROM Vehicle ORDER BY Vehicle_id DESC LIMIT 1";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            return resultSet.getString(1);
+        } else {
+            return null;
+        }
+    }
 }

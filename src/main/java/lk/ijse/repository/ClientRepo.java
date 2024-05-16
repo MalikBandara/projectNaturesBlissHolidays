@@ -130,4 +130,18 @@ public class ClientRepo {
         return mtIDList;
 
     }
+
+    public static String getLastClientId() throws SQLException {
+
+        String sql = "SELECT id FROM Client ORDER BY id DESC LIMIT 1";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            return resultSet.getString(1);
+        } else {
+            return null;
+        }
+    }
 }

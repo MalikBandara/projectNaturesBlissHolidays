@@ -182,6 +182,7 @@ public class Payment2Controller {
         setCellValueFactory();
         loadAllPayment();
         paiddate.setText(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        generateNewPaymentId();
     }
 
     private void loadAllPayment() {
@@ -213,6 +214,34 @@ public class Payment2Controller {
         colpaidDate.setCellValueFactory(new PropertyValueFactory<>("paidDate"));
         colMethod.setCellValueFactory(new PropertyValueFactory<>("status"));
     }
+
+    private void generateNewPaymentId() {
+        try {
+            String lastId = PaymentRepo.getLastPaymentId();
+            String newId = generateNextPaymentId(lastId);
+            paymentId.setText(newId);
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to generate payment ID: " + e.getMessage()).show();
+        }
+    }
+
+    private String generateNextPaymentId(String lastId) {
+        if (lastId == null || lastId.isEmpty()) {
+            return "PA001"; // Default ID if no payments exist
+        }
+
+        // Extracting the numeric part of the lastId
+        int num = Integer.parseInt(lastId.substring(2)); // Assuming "PA" prefix
+
+        // Incrementing the numeric part
+        num++;
+
+        // Formatting the numeric part to ensure it has three digits
+        String paddedNum = String.format("%03d", num);
+
+        return "PA" + paddedNum;
+    }
+
 
     @FXML
     void saveOnAction(ActionEvent event) {

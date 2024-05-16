@@ -104,6 +104,7 @@ public class Client2Controller {
         setCellValueFactory();
         loadAllClient();
         cheackin.setText(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        generateNewClientId();
     }
 
     private void loadAllClient() {
@@ -288,6 +289,33 @@ public class Client2Controller {
 
 
     }
+    private void generateNewClientId() {
+        try {
+            String lastId = ClientRepo.getLastClientId();
+            String newId = generateNextClientId(lastId);
+            id.setText(newId);
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to generate client ID: " + e.getMessage()).show();
+        }
+    }
+
+    private String generateNextClientId(String lastId) {
+        if (lastId == null || lastId.isEmpty()) {
+            return "C001"; // Default ID if no clients exist
+        }
+
+        // Extracting the numeric part of the lastId
+        int num = Integer.parseInt(lastId.substring(1)); // Assuming "C" prefix
+
+        // Incrementing the numeric part
+        num++;
+
+        // Formatting the numeric part to ensure it has three digits
+        String paddedNum = String.format("%03d", num);
+
+        return "C" + paddedNum;
+    }
+
 
 
     @FXML

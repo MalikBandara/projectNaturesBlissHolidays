@@ -121,5 +121,16 @@ public class EmployeeRepo {
     }
 
 
+    public static String getLastEmployeeId() throws SQLException {
+        String sql = "SELECT Employee_id FROM Employee ORDER BY Employee_id DESC LIMIT 1";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
 
+        if (resultSet.next()) {
+            return resultSet.getString(1);
+        } else {
+            return null;
+        }
+    }
 }

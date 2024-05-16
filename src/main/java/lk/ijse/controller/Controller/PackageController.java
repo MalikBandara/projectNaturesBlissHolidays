@@ -78,6 +78,7 @@ public class PackageController {
     public void initialize(){
         setCellValueFactory();
         loadAllPackage();
+        generateNewPackageId();
     }
 
     private void loadAllPackage() {
@@ -100,6 +101,34 @@ public class PackageController {
         }
 
     }
+
+    private void generateNewPackageId() {
+        try {
+            String lastId = PackageRepo.getLastPackageId();
+            String newId = generateNextPackageId(lastId);
+            txtPackageId.setText(newId);
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to generate package ID: " + e.getMessage()).show();
+        }
+    }
+
+    private String generateNextPackageId(String lastId) {
+        if (lastId == null || lastId.isEmpty()) {
+            return "P001"; // Default ID if no packages exist
+        }
+
+        // Extracting the numeric part of the lastId
+        int num = Integer.parseInt(lastId.substring(1)); // Assuming "P" prefix
+
+        // Incrementing the numeric part
+        num++;
+
+        // Formatting the numeric part to ensure it has three digits
+        String paddedNum = String.format("%03d", num);
+
+        return "P" + paddedNum;
+    }
+
 
     private void setCellValueFactory() {
         colid.setCellValueFactory(new PropertyValueFactory<>("packageId"));

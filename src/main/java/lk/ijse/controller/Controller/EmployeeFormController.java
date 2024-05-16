@@ -100,6 +100,7 @@ public class EmployeeFormController {
         setCellValueFactory();
         loadAllEmployees();
         getRoomId();
+        generateNewEmployeeId();
 
 
 
@@ -396,4 +397,32 @@ public class EmployeeFormController {
     public void EmpOnAction(KeyEvent keyEvent) {
         Regex.setTextColor(TextFields.EmployeeID,txtempid);
     }
+
+    private void generateNewEmployeeId() {
+        try {
+            String lastId = EmployeeRepo.getLastEmployeeId();
+            String newId = generateNextEmployeeId(lastId);
+            txtempid.setText(newId);
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Failed to generate employee ID: " + e.getMessage()).show();
+        }
+    }
+
+    private String generateNextEmployeeId(String lastId) {
+        if (lastId == null || lastId.isEmpty()) {
+            return "E001"; // Default ID if no employees exist
+        }
+
+        // Extracting the numeric part of the lastId
+        int num = Integer.parseInt(lastId.substring(1)); // Assuming "E" prefix
+
+        // Incrementing the numeric part
+        num++;
+
+        // Formatting the numeric part to ensure it has three digits
+        String paddedNum = String.format("%03d", num);
+
+        return "E" + paddedNum;
+    }
+
 }

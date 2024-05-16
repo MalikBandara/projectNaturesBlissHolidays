@@ -3,7 +3,7 @@
     -fx-border-width: 0 0 2px 0; /* No border on top, right, and left; 2px solid red border bottom */
     -fx-border-color: #0ab9ea;
     -fx-border-radius: 0; /* No border radius */
-    -fx-text-fill: white; /* White text color */
+    -fx-text-fill: #000000; /* White text color */
     -fx-font-weight: bold; /* Bold font weight */
     -fx-font-size: 20px; /* Font size 20 */
 }
