@@ -88,4 +88,12 @@ public class BookingRepo {
         }
         return puList;
     }
+    public static boolean deleteBooking(String bookingId) throws SQLException {
+        String sql = "DELETE FROM Booking WHERE Booking_id = ?";
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        pstm.setString(1, bookingId);
+
+        return pstm.executeUpdate() > 0;
+    }
 }

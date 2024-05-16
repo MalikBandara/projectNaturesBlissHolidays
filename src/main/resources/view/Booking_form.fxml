@@ -44,7 +44,7 @@
          </effect>
       </Label>
       <TextField fx:id="txtDate" layoutX="1546.0" layoutY="78.0" onKeyReleased="#BookingDateOnAction" prefHeight="39.0" prefWidth="266.0" stylesheets="@../css/booking.css" />
-      <Button fx:id="btnbooking" layoutX="813.0" layoutY="350.0" mnemonicParsing="false" onAction="#PlaceBookingOnAction" prefHeight="53.0" prefWidth="219.0" stylesheets="@../css/booking.css" text="Place Booking">
+      <Button fx:id="btnbooking" layoutX="813.0" layoutY="350.0" mnemonicParsing="false" onAction="#PlaceBookingOnAction" prefHeight="53.0" prefWidth="219.0" stylesheets="@../css/booking.css" text="Place ">
          <font>
             <Font name="Noto Serif CJK JP Bold" size="18.0" />
          </font>
@@ -212,7 +212,7 @@
             <Image url="@../image/right-arrow-double-3.gif" />
          </image>
       </ImageView>
-      <Label layoutX="738.0" layoutY="237.0" prefHeight="51.0" prefWidth="379.0" text="PLACE YOU BOOKING" textFill="WHITE">
+      <Label layoutX="393.0" layoutY="186.0" prefHeight="51.0" prefWidth="379.0" text="PLACE YOU BOOKING" textFill="WHITE">
          <font>
             <Font name="Noto Serif CJK JP Bold" size="31.0" />
          </font>
@@ -220,7 +220,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Label layoutX="853.0" layoutY="283.0" prefHeight="51.0" prefWidth="152.0" text="IN HEAR">
+      <Label layoutX="620.0" layoutY="241.0" prefHeight="51.0" prefWidth="152.0" text="IN HEAR">
          <font>
             <Font name="Noto Serif CJK JP Bold" size="33.0" />
          </font>
@@ -237,5 +237,22 @@
             <Image url="@../image/Asset-1@2x-1.png" />
          </image>
       </ImageView>
+      <Button fx:id="btnbooking1" layoutX="814.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnDeleteBookingOnAction" prefHeight="53.0" prefWidth="219.0" stylesheets="@../css/booking.css" text="Delete ">
+         <font>
+            <Font name="Noto Serif CJK JP Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="809.0" layoutY="196.0" prefHeight="32.0" prefWidth="266.0" text="Delete your Booking">
+         <font>
+            <Font name="Noto Serif CJK JP Bold" size="21.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
    </children>
 </AnchorPane>

@@ -122,7 +122,7 @@ public class GuestDashBoardController {
             Parent Loginpanel = loader.load();
 
             Stage stage = (Stage) btnLogOUt.getScene().getWindow();
-            stage.setTitle("Payment");
+            stage.setTitle("Welcome Form");
 
             // Animate the exit of the welcome page
             Timeline exitTimeline = new Timeline(

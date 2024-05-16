@@ -93,6 +93,10 @@ public class BookingFormController {
     private Button btnbooking;
 
     @FXML
+    private Button btnbooking1;
+
+
+    @FXML
     private Button btnBack;
 
     @FXML
@@ -117,6 +121,30 @@ public class BookingFormController {
     private TextField txtDate;
     @FXML
     private ComboBox<String> roomcmb;
+
+
+    @FXML
+    void btnDeleteBookingOnAction(ActionEvent event) {
+        String bookingId = txtBookingId.getText(); // Assuming the ID field corresponds to the booking ID
+
+        if (isValied()) {
+            try {
+                boolean isDeleted = BookingRepo.deleteBooking(bookingId);
+                if (isDeleted) {
+                    new Alert(Alert.AlertType.CONFIRMATION, "Booking deleted!").show();
+                    loadAllBooking();
+                    loadAllRooms(); // Update rooms availability
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "Booking not found!").show();
+                }
+            } catch (SQLException e) {
+                new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            }
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Check your fields correctly!").show();
+        }
+    }
+
 
     @FXML
     void PlaceBookingOnAction(ActionEvent event) {

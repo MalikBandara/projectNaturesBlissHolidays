@@ -101,8 +101,9 @@ public class Regex {
                 field = "^[B][0-9]{3,4}$";
                 break;
             case ResID :
-                field = "^[R][0-9]{3,4}$";
-                break;
+                field = "^RE[0-9]{3,4}$";
+
+            break;
 
         }
         Pattern pattern =Pattern.compile(field);
