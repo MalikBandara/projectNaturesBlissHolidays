@@ -59,7 +59,7 @@ public class AdminLoginFormController implements Initializable {
             Parent loginPanel = loader.load();
 
             Stage stage = (Stage) root.getScene().getWindow();
-            stage.setTitle("Login");
+            stage.setTitle("Welcome");
 
             // Animate the exit of the welcome page
             Timeline exitTimeline = new Timeline(
